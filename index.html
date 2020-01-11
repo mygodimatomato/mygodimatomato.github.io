@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mygodimatomato</title>
+		<style>
+			body{
+				background-color: white;
+				text-align: left;
+				color: black;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="styles1.css">
+	</head>
+	<body>
+		<h1>Mygodimatomato<p div id="clock"></p></h1>
+        <h2><img src="mygodimatomato_circle.jpg" height="300"></h2>
+		<h2>Self introduction</h2>
+		
+		<h3>Education</h3>
+		
+			<li>Kaohsiung Municipal Sinshang Primary School</li>
+			<li>Kaohsiung Municipal Minghua Junior High School</li>
+			<li>Kaohsiung Municipal Kaohsiung Senior High School</li>
+			<li>Department of Computer Science, National Tsing Hua University</li>
+		<h3>Interests</h3>
+			<ol>
+				<li>Pokemon Go</li>
+				<li>Skateboarding</li>
+				<li>Traveling</li>
+				<li>Listening Music</li>
+			</ol>
+		<h3>More Information</h3>
+			<a herf="#" title="詹博允"><img src="facebook.jpg" alt="https://www.facebook.com/profile.php?id=100000497465470"border="0"></a>
+		<script>
+			var clock = document.getElementById('clock');
+
+			function time() {
+				var d = new Date();
+				var year = d.getFullYear();
+				var month = d.getMonth() + 1;
+				var day = d.getDate();
+				var s = d.getSeconds();
+				var m = d.getMinutes();
+				var h = d.getHours();
+				clock.textContent = '';
+				clock.textContent += year + '.' + month + '.' + day + ' ';
+				clock.textContent += (h < 10 ? '0' + h : h);
+				clock.textContent += ' : ';
+				clock.textContent += (m < 10 ? '0' + m : m);
+				clock.textContent += ' : ';
+				clock.textContent += (s < 10 ? '0' + s : s);
+			}
+
+			time();
+			setInterval(time, 1000);
+		</script>
+	</body>
+</html>
