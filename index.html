@@ -3,25 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Mygodimatomato</title>
-		<style>
+		<link rel="stylesheet" type="text/css" href="styles1.css">
+		<style type="text/css">
+			p{
+				font-family: 'Noto Sans TC', sans-serif;
+			}
 			#content{
-				margin-left: 36%;
+				margin-left: 30%;
 				margin-right: 22%;
 			}
+			#sidebar1{
+				float: left;
+				width: 22%;
+				height: 1000px;
+				background: #999999;}
+			#sidebar2{
+				float: right;
+				width: 21%;
+				height: 1000px;
+				background: #999999;}
+			#Education{
+				position: relative;
+				left: -40px;
+				}
+			#induction{
+				color: #abedb7;
+			}
 		</style>
-		<link rel="stylesheet" type="text/css" href="styles1.css">
+		
 	</head>
 	<body>
+		<div id="sidebar1"></div>
+		<div id="sidebar2"></div>
 		<div id="content">
-			<h1>Mygodimatomato<p div id="clock"></p></h1>
+			<h1><p style="font-size: 40px;">Mygodimatomato</p><p div id="clock"></p></h1>
 	        <h2><img src="mygodimatomato_circle.jpg" height="300"></h2>
-			<h2>Self introduction</h2>
-			
+			<h2 id="induction">Self introduction</h2>
 			<h3>Education</h3>
-				<li>Kaohsiung Municipal Sinshang Primary School</li>
-				<li>Kaohsiung Municipal Minghua Junior High School</li>
-				<li>Kaohsiung Municipal Kaohsiung Senior High School</li>
-				<li>Department of Computer Science, National Tsing Hua University</li>
+				<ul id = "Education">
+					<li>Kaohsiung Municipal Sinshang Primary School</li>
+					<li>Kaohsiung Municipal Minghua Junior High School</li>
+					<li>Kaohsiung Municipal Kaohsiung Senior High School</li>
+					<li>Department of Computer Science, National Tsing Hua University</li>
+				</ul>
+				
 			<h3>Interests</h3>
 				<ol>
 					<li>Pokemon Go</li>
@@ -33,7 +58,6 @@
 				<a href="https://www.facebook.com/profile.php?id=100000497465470">Mygodimatomato</a>
 			<script>
 				var clock = document.getElementById('clock');
-
 				function time() {
 					var d = new Date();
 					var year = d.getFullYear();
@@ -50,11 +74,9 @@
 					clock.textContent += ' : ';
 					clock.textContent += (s < 10 ? '0' + s : s);
 				}
-
 				time();
 				setInterval(time, 1000);
 		</script>
 		</div>
-		
 	</body>
 </html>
